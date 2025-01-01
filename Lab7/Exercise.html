@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Store</title>
+  <link rel="stylesheet" href="/Users/aqilm/Documents/Lab Web Design/Lab7/css/exercise.css">
+</head>
+<body>
+
+    <div id="home"></div>
+
+<!-- Transparent Image Text (Hero Section) -->
+<div class="image-container">
+    <div class="overlay-text">Welcome to Aqil Clothing Store</div>
+    <div class="slide fade">
+      <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/f1.jpg" alt="Store Banner 1">
+    </div>
+    <div class="slide fade">
+      <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/f2.jpg" alt="Store Banner 2">
+    </div>
+    <div class="slide fade">
+      <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/f3.webp" alt="Store Banner 3">
+    </div>
+</div>
+
+<!-- Login/Sign-up Form Overlay -->
+<div class="form-overlay">
+    <div class="form-container" id="login-form">
+      <button class="close-btn" onclick="closeForm()">×</button>
+      <h2>Login to Your Account</h2>
+      <form action="#" method="POST" id="login">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" oninput="validateEmail()">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password" oninput="validatePassword()">
+        
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="javascript:void(0)" onclick="toggleForms()">Sign up here</a></p>
+      </form>
+    </div>
+
+    <div class="form-container" id="signup-form" style="display: none;">
+      <button class="close-btn" onclick="closeForm()">×</button>
+      <h2>Sign Up for a New Account</h2>
+      <form action="#" method="POST" id="signup">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" name="email" required placeholder="Enter your email" oninput="validateSignupEmail()">
+        
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" name="password" required placeholder="Enter your password" oninput="validateSignupPassword()">
+        
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="javascript:void(0)" onclick="toggleForms()">Login here</a></p>
+      </form>
+    </div>
+</div>
+
+<!-- Header Section -->
+<header>
+  <div class="logo">
+    <h1>My Online Store</h1>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for products...">
+  </div>
+  <div class="cart">
+    <button>Cart (0)</button>
+  </div>
+</header>
+
+<!-- Side Navigation -->
+<div class="side-nav">
+    <a href="#men">Men</a>
+    <a href="#women">Women</a>
+    <a href="#kid">Kid</a>
+    <a href="#home">Home</a> <!-- This will scroll to the top -->
+  </div>
+
+<!-- Main Content -->
+<div class="main-content">
+
+  <!-- Men Section -->
+  <section id="men" class="product-section">
+    <h2>Men's Collection</h2>
+    <div class="product-container">
+      <div class="product-card" data-category="men">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/m1.webp" alt="Men's Product 1">
+        <h3>Men's Product 1</h3>
+        <p>$100</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="men">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/m2.webp" alt="Men's Product 2">
+        <h3>Men's Product 2</h3>
+        <p>$120</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="men">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/m3.webp" alt="Men's Product 2">
+        <h3>Men's Product 3</h3>
+        <p>$140</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="men">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/m4.webp" alt="Men's Product 2">
+        <h3>Men's Product 4</h3>
+        <p>$150</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="men">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/m5.webp" alt="Men's Product 2">
+        <h3>Men's Product 5</h3>
+        <p>$220</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Women Section -->
+  <section id="women" class="product-section">
+    <h2>Women's Collection</h2>
+    <div class="product-container">
+      <div class="product-card" data-category="women">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/w1.webp" alt="Women's Product 1">
+        <h3>Women's Product 1</h3>
+        <p>$80</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="women">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/w2.webp" alt="Women's Product 2">
+        <h3>Women's Product 2</h3>
+        <p>$90</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="women">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/w3.webp" alt="Women's Product 2">
+        <h3>Women's Product 3</h3>
+        <p>$120</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="women">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/w4.webp" alt="Women's Product 2">
+        <h3>Women's Product 4</h3>
+        <p>$130</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="women">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/w5.jpg" alt="Women's Product 2">
+        <h3>Women's Product 5</h3>
+        <p>$180</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+ <!-- Kid Section -->
+ <section id="kid" class="product-section">
+    <h2>Kid's Collection</h2>
+    <div class="product-container">
+      <div class="product-card" data-category="kid">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/k1.webp" alt="Kid's Product 1">
+        <h3>Kid's Product 1</h3>
+        <p>$50</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="kid">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/k2.webp" alt="Kid's Product 2">
+        <h3>Kid's Product 2</h3>
+        <p>$60</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="kid">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/k3.webp" alt="Kid's Product 3">
+        <h3>Kid's Product 3</h3>
+        <p>$70</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="kid">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/k4.webp" alt="Kid's Product 4">
+        <h3>Kid's Product 4</h3>
+        <p>$80</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="kid">
+        <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/k5.webp" alt="Kid's Product 5">
+        <h3>Kid's Product 5</h3>
+        <p>$90</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+ <!-- Profile Card Section -->
+<section id="profile-card" class="profile-card-section">
+    <h2>Meet Our Founder</h2>
+    <div class="profile-card">
+      <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/profile.webp" alt="Profile Picture" class="profile-img">
+      <div class="profile-details">
+        <h3>John Doe</h3>
+        <p>A passionate entrepreneur, John founded Aqil Clothing Store with a vision to provide fashionable and affordable clothing for everyone. When he's not working, he loves to travel and explore new cultures.</p>
+        <div class="social-media">
+          <!-- Social Media Images -->
+          <a href="https://facebook.com" target="_blank" class="social-icon">
+            <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/fb.png" alt="Facebook">
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon">
+            <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/x.jpg" alt="Twitter">
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-icon">
+            <img src="/Users/aqilm/Documents/Lab Web Design/Lab7/img/ig.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Business Progress Bar Section -->
+<section id="business-progress" class="business-progress-section">
+    <h2>Business Progress</h2>
+    <p>Sales Target Completion</p>
+    <div class="progress-container">
+      <div class="progress-bar" id="business-progress-bar"></div>
+    </div>
+    <p id="progress-percentage">0%</p>
+  </section>
+
+  <!-- Collapsible Section (Example: FAQs) -->
+<section id="collapsible-section">
+    <h2>FAQs</h2>
+    <button class="collapsible">Show FAQs</button>
+    <div class="collapsible-content">
+      <p><strong>Q: What is Aqil Clothing Store?</strong></p>
+      <p>Aqil Clothing Store is a fashion brand offering a wide range of clothing and accessories for all ages.</p>
+      <p><strong>Q: How can I make a purchase?</strong></p>
+      <p>You can browse our collections, add products to your cart, and proceed to checkout securely.</p>
+      <p><strong>Q: Do you offer international shipping?</strong></p>
+      <p>Yes, we offer shipping to various countries worldwide. Shipping fees and delivery times vary depending on location.</p>
+    </div>
+  </section>
+  
+<!-- Footer Section -->
+<footer>
+  <div class="footer-links">
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+<script src="/Users/aqilm/Documents/Lab Web Design/Lab7/js/Exercise.js"></script>
+</body>
+</html>
